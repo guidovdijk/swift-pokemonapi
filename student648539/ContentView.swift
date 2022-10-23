@@ -8,19 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var selection = 1
+
+    let columns = [
+        GridItem(.adaptive(minimum: 170))
+    ]
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        TabView(selection: $selection) {
+            HomePageView()
+                .tabItem {
+                    Image(selection == 1 ? "pokeball.fill" : "pokeball.line")
+                    Text("Pokemons")
+                }.tag(1)            
+            FavouritePageView()
+                .tabItem {
+                    Image(systemName: selection == 2 ? "heart.fill" : "heart")
+                        .environment(\.symbolVariants, .none)
+                    Text("Favourite")
+                }.tag(2)
+        }.accentColor(Color(0x5631E8))
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(PokemonFavourite())
     }
 }

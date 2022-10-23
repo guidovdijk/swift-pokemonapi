@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct student648539App: App {
+    @StateObject
+    var favourites = PokemonFavourite()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(favourites)
         }
     }
 }

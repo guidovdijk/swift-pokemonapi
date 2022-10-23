@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  student648539
+
+  Created by Guido van Dijk on 15/10/2022.
+  
+*/
+
+// TabView
+"Pokemons" = "Pokemons";
+"Favourite" = "Favourite";
+
+// Homepage
+"HomepageTitle" = "All Pokemon's";
+"HomePageError" = "We could not fetch the pokemons. Please restart the application and try again.";
+
+// Favourite Page
+"NoFavourites" = "No favourites added yet";
+"FavouritesTitle" = "My favourites";
+
+//Detail Page
+"About" = "About";
+"Stats" = "Stats";
+"Evolutions" = "Evolutions";
+"Name" = "Name";
+"Id" = "Id";
+"Base" = "Base";
+"Weight" = "Weight";
+"Height" = "Height";
+"Types" = "Types";
+"Abilities" = "Abilities";
+"PokemonDetailError" = "We could not get the details of the pokemon. Please restart the application and try again.";
+"PokemonEvolutionError" = "We could not find the evolution of the pokemon. Please restart the application and try again.";
